@@ -1,0 +1,7 @@
+package org.resturant.controller;
+
+
+@Controller
+public class ResturantPageController {
+
+}

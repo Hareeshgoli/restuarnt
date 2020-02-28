@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+  
+   
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="assets/plugins/jquery.validationEngine-en.js"></script>
+    <link rel="stylesheet" href="assets/jquery-ui/jquery-ui.theme.css"/>
+        <link rel="stylesheet" href="assets/jquery-ui/jquery-ui.structure.min.css"/>
+		<style>
+			#header{
+				background-color: lightblue;
+				width:100%;
+				height:50px;
+				text-align: center;
+			}
+
+			#sidebar-left{
+				float:left;
+				width:15%;
+				background-color: #FFFFFF;
+			}
+
+			#main{
+				float:left;
+				width:85%;
+				background-color: #FFFFFF;
+			}
+
+			#footer{
+				clear:both;
+				height: 50px;
+				width: 100%;
+				text-align: center;
+				background-color: lightblue;
+			}
+
+			#sidebar-left, #main{
+				min-height: 600px				
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="header" class="container">
+			<div class="col-md-9">
+			<p style="align:center">Welcome to our app</p></div>
+			<div class="col-md-3">
+				<div class="col-md-9"><p style="align:right"><b>User Name:</b></p></div>
+				<div class="col-md-3"><p th:text="${Username}"></div>
+			</div>
+		</div>
+		<div id="sidebar-left">
+		<div style="padding-top:20px;padding-left:10px">
+		<div>
+		<a href="#">Create a categories</a></div>
+		<div style="padding-top:10px">
+		<a id="CSC" href="javascript:subcategorie()">Create sub categories</a></div>
+		<div style="padding-top:10px">
+		<a href="#">Create Items</a></div>
+		<div style="padding-top:10px">
+		<a href="#">Create Resturant</a></div>
+		<div style="padding-top:10px">
+		<a href="#">Create Resturant-Items Mapping</a></div>
+		</div>
+		</div>
+		<div id="main">
+		<div th:fragment="section" id="main-section"></div>
+		</div>
+		<div id="footer">Footer</div>
+	</body>
+	<script type="text/javascript" th:inline="javascript">
+					/*<![CDATA[*/
+
+			function subcategorie() {	
+				window.alert("DG");	
+							$.ajax({
+								url : "home",
+								type : "GET",									
+								success : function(response) {
+									$("#main-section").html(response);
+								},
+								error : function() {
+								}
+							});	
+						}
+	</script>
+</html>

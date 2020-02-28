@@ -1,0 +1,42 @@
+package org.resturant.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.resturant.model.UserTbl;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class ResturantPageController {
+	
+	
+	@GetMapping("/customer")
+	public String customerLoginPage(Model model) {
+		
+		return"register";
+	}
+	
+	
+	
+	
+	@PostMapping("customerDashboard")
+	public String customerDashBoard(Model model ,HttpServletRequest request ,UserTbl userTbl) {
+		
+		request.getParameter("CustTblNbr");
+		request.getParameter("CustomerName");
+		request.getParameter("CustMonNbr");
+		
+		
+		return"dashboard";
+	
+	}
+	
+	@GetMapping("/dashboard")
+	public String resturantBashboard(Model model) {
+		
+		return"dashboard";
+	}
+
+}

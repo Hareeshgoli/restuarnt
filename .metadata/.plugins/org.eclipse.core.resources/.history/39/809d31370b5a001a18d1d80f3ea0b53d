@@ -1,0 +1,5 @@
+package org.resturant;
+
+public interface CustomerDetailsRepository {
+
+}

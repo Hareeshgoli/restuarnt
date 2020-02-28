@@ -1,0 +1,33 @@
+package org.resturant.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class ResturantPageController {
+	
+	
+	@GetMapping("/customer")
+	public String customerLoginPage(Model model) {
+		
+		return"register";
+	}
+	
+	
+	
+	
+	@GetMapping("/customerDashboard")
+	public String customerDashBoard(Model model) {
+		
+		return"dashboard";
+	
+	}
+	
+	@GetMapping("/dashboard")
+	public String resturantBashboard(Model model) {
+		
+		return"dashboard";
+	}
+
+}

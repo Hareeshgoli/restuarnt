@@ -1,0 +1,2289 @@
+!SESSION 2020-02-28 11:04:55.348 -----------------------------------------------
+eclipse.buildId=3.8.2.201610040743-RELEASE-e46
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.springsource.sts.ide -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide -data C:\Users\VIT-AP\Downloads\resturant -product org.springsource.sts.ide
+
+This is a continuation of log file C:\Users\VIT-AP\Downloads\resturant\.metadata\.bak_0.log
+Created Time: 2020-02-28 15:45:25.674
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:45:25.685
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.springframework.ide.eclipse.beans.core 1 0 2020-02-28 15:45:25.695
+!MESSAGE Error occured processing 'org.resturant.ResturantApplication'
+!STACK 0
+org.springframework.core.annotation.AnnotationConfigurationException: Attribute 'proxyBeanMethods' in annotation [org.springframework.boot.SpringBootConfiguration] is declared as an @AliasFor nonexistent attribute 'proxyBeanMethods' in annotation [org.springframework.context.annotation.Configuration].; nested exception is java.lang.NoSuchMethodException: org.springframework.context.annotation.Configuration.proxyBeanMethods()
+	at org.springframework.core.annotation.AnnotationUtils$AliasDescriptor.<init>(AnnotationUtils.java:1994)
+	at org.springframework.core.annotation.AnnotationUtils$AliasDescriptor.from(AnnotationUtils.java:1961)
+	at org.springframework.core.annotation.AnnotationUtils.getAttributeAliasNames(AnnotationUtils.java:1631)
+	at org.springframework.core.annotation.AnnotationUtils.isSynthesizable(AnnotationUtils.java:1590)
+	at org.springframework.core.annotation.AnnotationUtils.synthesizeAnnotation(AnnotationUtils.java:1373)
+	at org.springframework.core.annotation.AnnotationUtils.synthesizeAnnotationArray(AnnotationUtils.java:1477)
+	at org.springframework.core.annotation.AnnotationUtils.getAnnotations(AnnotationUtils.java:230)
+	at org.springframework.core.type.classreading.AnnotationAttributesReadingVisitor.doVisitEnd(AnnotationAttributesReadingVisitor.java:76)
+	at org.springframework.core.type.classreading.RecursiveAnnotationAttributesVisitor.visitEnd(RecursiveAnnotationAttributesVisitor.java:48)
+	at org.springframework.asm.ClassReader.readAnnotationValues(ClassReader.java:1802)
+	at org.springframework.asm.ClassReader.accept(ClassReader.java:642)
+	at org.springframework.asm.ClassReader.accept(ClassReader.java:508)
+	at org.springframework.ide.eclipse.core.java.classreading.JdtConnectedMetadataReader.<init>(JdtConnectedMetadataReader.java:43)
+	at org.springframework.ide.eclipse.core.java.classreading.JdtMetadataReaderFactory.getMetadataReader(JdtMetadataReaderFactory.java:53)
+	at org.springframework.ide.eclipse.core.java.classreading.CachingJdtMetadataReaderFactory.getMetadataReader(CachingJdtMetadataReaderFactory.java:38)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.registerBean(BeansJavaConfig.java:360)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:229)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NoSuchMethodException: org.springframework.context.annotation.Configuration.proxyBeanMethods()
+	at java.lang.Class.getDeclaredMethod(Unknown Source)
+	at org.springframework.core.annotation.AnnotationUtils$AliasDescriptor.<init>(AnnotationUtils.java:1987)
+	... 23 more
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:45:26.479
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:45:26.479
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:45:26.610
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:46:26.653
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:46:26.733
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:46:26.733
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:46:26.917
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:46:26.923
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:46:26.923
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:46:54.108
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:46:54.141
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:46:54.141
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:46:54.283
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:46:54.289
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:46:54.289
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:47:07.274
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:47:07.991
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:47:07.991
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:47:08.120
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:47:37.666
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.springframework.ide.eclipse.beans.core 1 0 2020-02-28 15:47:37.677
+!MESSAGE Error occured processing 'org.resturant.ResturantApplication'
+!STACK 0
+org.springframework.core.annotation.AnnotationConfigurationException: Attribute 'proxyBeanMethods' in annotation [org.springframework.boot.SpringBootConfiguration] is declared as an @AliasFor nonexistent attribute 'proxyBeanMethods' in annotation [org.springframework.context.annotation.Configuration].; nested exception is java.lang.NoSuchMethodException: org.springframework.context.annotation.Configuration.proxyBeanMethods()
+	at org.springframework.core.annotation.AnnotationUtils$AliasDescriptor.<init>(AnnotationUtils.java:1994)
+	at org.springframework.core.annotation.AnnotationUtils$AliasDescriptor.from(AnnotationUtils.java:1961)
+	at org.springframework.core.annotation.AnnotationUtils.getAttributeAliasNames(AnnotationUtils.java:1631)
+	at org.springframework.core.annotation.AnnotationUtils.isSynthesizable(AnnotationUtils.java:1590)
+	at org.springframework.core.annotation.AnnotationUtils.synthesizeAnnotation(AnnotationUtils.java:1373)
+	at org.springframework.core.annotation.AnnotationUtils.synthesizeAnnotationArray(AnnotationUtils.java:1477)
+	at org.springframework.core.annotation.AnnotationUtils.getAnnotations(AnnotationUtils.java:230)
+	at org.springframework.core.type.classreading.AnnotationAttributesReadingVisitor.doVisitEnd(AnnotationAttributesReadingVisitor.java:76)
+	at org.springframework.core.type.classreading.RecursiveAnnotationAttributesVisitor.visitEnd(RecursiveAnnotationAttributesVisitor.java:48)
+	at org.springframework.asm.ClassReader.readAnnotationValues(ClassReader.java:1802)
+	at org.springframework.asm.ClassReader.accept(ClassReader.java:642)
+	at org.springframework.asm.ClassReader.accept(ClassReader.java:508)
+	at org.springframework.ide.eclipse.core.java.classreading.JdtConnectedMetadataReader.<init>(JdtConnectedMetadataReader.java:43)
+	at org.springframework.ide.eclipse.core.java.classreading.JdtMetadataReaderFactory.getMetadataReader(JdtMetadataReaderFactory.java:53)
+	at org.springframework.ide.eclipse.core.java.classreading.CachingJdtMetadataReaderFactory.getMetadataReader(CachingJdtMetadataReaderFactory.java:38)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.registerBean(BeansJavaConfig.java:360)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:229)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NoSuchMethodException: org.springframework.context.annotation.Configuration.proxyBeanMethods()
+	at java.lang.Class.getDeclaredMethod(Unknown Source)
+	at org.springframework.core.annotation.AnnotationUtils$AliasDescriptor.<init>(AnnotationUtils.java:1987)
+	... 23 more
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:47:38.419
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:47:38.419
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:47:38.574
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:47:57.731
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:47:58.444
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:47:58.444
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:47:58.586
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:48:05.271
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:48:05.980
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:48:05.980
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:48:06.170
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:49:13.232
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:49:15.095
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:49:15.884
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:49:15.884
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:50:11.509
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:50:11.545
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:50:11.545
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:50:11.650
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:50:11.657
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:50:11.657
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:52:19.469
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:52:19.487
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:52:19.487
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:52:19.607
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:52:19.613
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:52:19.613
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:54:27.117
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:54:27.135
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:54:27.135
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:54:27.270
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:54:27.278
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:54:27.278
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:55:07.010
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:55:07.032
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:55:07.032
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:55:07.152
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:55:07.158
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:55:07.158
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:57:14.867
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:57:14.911
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:57:14.911
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:57:15.013
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:57:15.020
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:57:15.020
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:57:39.630
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:57:39.660
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:57:39.660
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:57:39.787
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:57:39.793
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:57:39.793
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:57:51.608
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:57:51.625
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:57:51.625
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:57:51.746
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:57:51.753
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:57:51.753
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:58:36.831
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:58:36.851
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:58:36.851
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:58:36.989
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:58:36.997
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:58:36.997
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:59:52.999
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:59:53.019
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:59:53.019
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 15:59:53.145
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 15:59:53.151
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 15:59:53.151
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 16:01:26.703
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 16:01:26.727
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 16:01:26.727
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 16:01:26.853
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 16:01:26.859
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 16:01:26.859
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 16:01:37.776
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 16:01:37.792
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 16:01:37.792
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 16:01:37.935
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 16:01:37.941
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 16:01:37.941
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 16:01:55.887
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 16:01:55.905
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 16:01:55.905
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 16:01:56.026
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 16:01:56.034
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 16:01:56.034
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 16:03:47.707
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.springframework.ide.eclipse.beans.core 1 0 2020-02-28 16:03:47.718
+!MESSAGE Error occured processing 'org.resturant.ResturantApplication'
+!STACK 0
+org.springframework.core.annotation.AnnotationConfigurationException: Attribute 'proxyBeanMethods' in annotation [org.springframework.boot.SpringBootConfiguration] is declared as an @AliasFor nonexistent attribute 'proxyBeanMethods' in annotation [org.springframework.context.annotation.Configuration].; nested exception is java.lang.NoSuchMethodException: org.springframework.context.annotation.Configuration.proxyBeanMethods()
+	at org.springframework.core.annotation.AnnotationUtils$AliasDescriptor.<init>(AnnotationUtils.java:1994)
+	at org.springframework.core.annotation.AnnotationUtils$AliasDescriptor.from(AnnotationUtils.java:1961)
+	at org.springframework.core.annotation.AnnotationUtils.getAttributeAliasNames(AnnotationUtils.java:1631)
+	at org.springframework.core.annotation.AnnotationUtils.isSynthesizable(AnnotationUtils.java:1590)
+	at org.springframework.core.annotation.AnnotationUtils.synthesizeAnnotation(AnnotationUtils.java:1373)
+	at org.springframework.core.annotation.AnnotationUtils.synthesizeAnnotationArray(AnnotationUtils.java:1477)
+	at org.springframework.core.annotation.AnnotationUtils.getAnnotations(AnnotationUtils.java:230)
+	at org.springframework.core.type.classreading.AnnotationAttributesReadingVisitor.doVisitEnd(AnnotationAttributesReadingVisitor.java:76)
+	at org.springframework.core.type.classreading.RecursiveAnnotationAttributesVisitor.visitEnd(RecursiveAnnotationAttributesVisitor.java:48)
+	at org.springframework.asm.ClassReader.readAnnotationValues(ClassReader.java:1802)
+	at org.springframework.asm.ClassReader.accept(ClassReader.java:642)
+	at org.springframework.asm.ClassReader.accept(ClassReader.java:508)
+	at org.springframework.ide.eclipse.core.java.classreading.JdtConnectedMetadataReader.<init>(JdtConnectedMetadataReader.java:43)
+	at org.springframework.ide.eclipse.core.java.classreading.JdtMetadataReaderFactory.getMetadataReader(JdtMetadataReaderFactory.java:53)
+	at org.springframework.ide.eclipse.core.java.classreading.CachingJdtMetadataReaderFactory.getMetadataReader(CachingJdtMetadataReaderFactory.java:38)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.registerBean(BeansJavaConfig.java:360)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:229)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NoSuchMethodException: org.springframework.context.annotation.Configuration.proxyBeanMethods()
+	at java.lang.Class.getDeclaredMethod(Unknown Source)
+	at org.springframework.core.annotation.AnnotationUtils$AliasDescriptor.<init>(AnnotationUtils.java:1987)
+	... 23 more
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 16:03:48.436
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 16:03:48.436
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 16:03:48.586
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 16:05:17.517
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 16:05:17.534
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 16:05:17.534
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-02-28 16:05:17.656
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2020-02-28 16:05:17.663
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.jboss.tools.cdi.core 4 75 2020-02-28 16:05:17.663
+!MESSAGE Errors running builder 'CDI (Contexts and Dependency Injection) Builder' on project 'resturant'.
+!STACK 0
+java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 33
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.tools.common.core.jandex.JandexUtil.createJarIndex(JandexUtil.java:56)
+	at org.jboss.tools.common.core.jandex.JandexUtil.hasAnnotation(JandexUtil.java:104)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.hasAnnotatedBeans(BeanArchiveDetector.java:276)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.BeanArchiveDetector.resolve(BeanArchiveDetector.java:203)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.detectBeanModule(ClassPathMonitor.java:150)
+	at org.jboss.tools.cdi.internal.core.scanner.lib.ClassPathMonitor.process(ClassPathMonitor.java:106)
+	at org.jboss.tools.cdi.core.CDICoreBuilder.build(CDICoreBuilder.java:215)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
