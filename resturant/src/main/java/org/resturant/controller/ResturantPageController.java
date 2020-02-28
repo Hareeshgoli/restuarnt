@@ -54,10 +54,10 @@ public class ResturantPageController {
 	
 	}
 	
-	@GetMapping("catagorary")
+	@PostMapping("catagorary")
 	public String ResturantCatagorary(Model model) {
 
-		return "login";
+		return "Category :: main-section";
 	}
 
 }
