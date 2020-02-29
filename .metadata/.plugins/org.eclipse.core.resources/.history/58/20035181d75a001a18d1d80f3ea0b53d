@@ -1,0 +1,33 @@
+package org.resturant.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+
+public class ItemsTblPK implements Serializable {
+	
+
+	@Column(name="ITEM_ID")
+	private String itemId;
+	
+	
+	@Column(name="CATAGORARY_CATAGORARY_ID")
+	private String catagoraryId;
+	
+	@Column(name="SUB_CATAGORARY_ID")
+	private String subCatagoraryId;
+	
+	
+	
+	
+
+	public String getItemId() {
+		return itemId;
+	}
+
+
+	public void setItemId(String itemId) {
+		this.itemId = itemId;
+	}
+
+}

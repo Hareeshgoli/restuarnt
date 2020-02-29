@@ -1,0 +1,92 @@
+package org.resturant.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+
+public class ItemsTblPK implements Serializable {
+	
+
+	@Column(name="ITEM_ID")
+	private String itemId;
+	
+	
+	@Column(name="CATAGORARY_CATAGORARY_ID")
+	private String catagoraryId;
+	
+	@Column(name="SUB_CATAGORARY_ID")
+	private String subCatagoraryId;
+	
+
+	public String getItemId() {
+		return itemId;
+	}
+
+
+	public void setItemId(String itemId) {
+		this.itemId = itemId;
+	}
+	
+
+	public String getCatagoraryId() {
+		return catagoraryId;
+	}
+
+
+	public void setCatagoraryId(String catagoraryId) {
+		this.catagoraryId = catagoraryId;
+	}
+
+
+	public String getSubCatagoraryId() {
+		return subCatagoraryId;
+	}
+
+
+	public void setSubCatagoraryId(String subCatagoraryId) {
+		this.subCatagoraryId = subCatagoraryId;
+	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((itemId == null) ? 0 : itemId.hashCode());
+		result = prime * result + ((catagoraryId == null) ? 0 : catagoraryId.hashCode());
+		result = prime * result + ((subCatagoraryId == null) ? 0 : subCatagoraryId.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AttendanceDebarTempModelPK other = (AttendanceDebarTempModelPK) obj;
+		if (classId == null) {
+			if (other.classId != null)
+				return false;
+		} else if (!classId.equals(other.classId))
+			return false;
+		if (periodType == null) {
+			if (other.periodType != null)
+				return false;
+		} else if (!periodType.equals(other.periodType))
+			return false;
+		if (registerNumber == null) {
+			if (other.registerNumber != null)
+				return false;
+		} else if (!registerNumber.equals(other.registerNumber))
+			return false;
+		if (semesterSubId == null) {
+			if (other.semesterSubId != null)
+				return false;
+		} else if (!semesterSubId.equals(other.semesterSubId))
+			return false;
+		return true;
+	}
+}

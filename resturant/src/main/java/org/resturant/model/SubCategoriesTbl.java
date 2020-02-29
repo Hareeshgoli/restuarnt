@@ -3,6 +3,7 @@ package org.resturant.model;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -15,18 +16,12 @@ import javax.persistence.Table;
 public class SubCategoriesTbl {
 
 	
-	@Id
-	@Column(name="SUB_CATAGORARY_ID")
-	private String SubcatagoraryId;
 	
+	@Embedded
+	SubCategoriesTblPK id;
 	
 	@Column(name="SUB_CATAGORARY_DESCRIPTION")
 	private String SubcatDescription;
-	
-	
-	@Column(name="CATAGORARY_CATAGORARY_ID")
-	private String catid;
-	
 	
 	@ManyToOne
 	@JoinColumn(name="CATAGORARY_CATAGORARY_ID", referencedColumnName="CATAGORARY_ID", insertable = false, updatable = false)
@@ -39,13 +34,6 @@ public class SubCategoriesTbl {
 	@OneToMany(mappedBy="subCategoriesTbl")
 	private List<RestaurantItemsMappingTbl> restaurantItemsMappingTbl;
 
-	public String getSubcatagoraryId() {
-		return SubcatagoraryId;
-	}
-
-	public void setSubcatagoraryId(String subcatagoraryId) {
-		SubcatagoraryId = subcatagoraryId;
-	}
 
 	public String getSubcatDescription() {
 		return SubcatDescription;
@@ -55,13 +43,7 @@ public class SubCategoriesTbl {
 		SubcatDescription = subcatDescription;
 	}
 
-	public String getCatid() {
-		return catid;
-	}
-
-	public void setCatid(String catid) {
-		this.catid = catid;
-	}
+	
 
 	public CatagoriesTbl getCatagoriesTbl() {
 		return CatagoriesTbl;
@@ -81,8 +63,8 @@ public class SubCategoriesTbl {
 
 	@Override
 	public String toString() {
-		return "SubCategoriesTbl [SubcatagoraryId=" + SubcatagoraryId + ", SubcatDescription=" + SubcatDescription
-				+ ", catid=" + catid + ", CatagoriesTbl=" + CatagoriesTbl + ", ItemsTbl=" + ItemsTbl + "]";
+		return "SubCategoriesTbl [SubcatDescription=" + SubcatDescription
+				+ ",CatagoriesTbl=" + CatagoriesTbl + ", ItemsTbl=" + ItemsTbl + "]";
 	}
 	
 	

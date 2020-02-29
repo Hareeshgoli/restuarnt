@@ -1,0 +1,12 @@
+package org.resturant.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+
+public class SubCategoriesTblPK implements Serializable {
+
+	
+	@Column(name="SUB_CATAGORARY_ID")
+	private String SubcatagoraryId;
+}

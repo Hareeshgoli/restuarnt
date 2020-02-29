@@ -34,6 +34,7 @@ public class ResturantFormProcessController {
 		else
 		{
 			String catId = idgenerationService.idGenerator('c');
+			System.out.println(catId+"dfhd");
 			cat.setCatagoraryId(catId);
 			cat.setCatDescription(CategoryName);
 			categoryRepository.save(cat);

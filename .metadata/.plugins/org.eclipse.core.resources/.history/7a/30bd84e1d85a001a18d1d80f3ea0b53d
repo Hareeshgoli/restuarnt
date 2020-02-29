@@ -1,0 +1,33 @@
+package org.resturant.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+
+public class SubCategoriesTblPK implements Serializable {
+
+	
+	@Column(name="SUB_CATAGORARY_ID")
+	private String SubcatagoraryId;
+	
+
+	@Column(name="CATAGORARY_CATAGORARY_ID")
+	private String catid;
+	
+	public String getCatid() {
+		return catid;
+	}
+
+	public void setCatid(String catid) {
+		this.catid = catid;
+	}
+	
+
+	public String getSubcatagoraryId() {
+		return SubcatagoraryId;
+	}
+
+	public void setSubcatagoraryId(String subcatagoraryId) {
+		SubcatagoraryId = subcatagoraryId;
+	}
+}
