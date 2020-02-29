@@ -1,0 +1,5 @@
+package org.resturant.repository;
+
+public interface CategoryRepository {
+
+}

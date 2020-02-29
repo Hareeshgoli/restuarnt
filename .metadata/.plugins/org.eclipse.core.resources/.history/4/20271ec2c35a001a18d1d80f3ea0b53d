@@ -1,0 +1,5 @@
+package org.resturant.service;
+
+public class IdgenerationService {
+
+}

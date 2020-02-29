@@ -1,0 +1,27 @@
+package org.resturant.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.resturant.repository.CategoryRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class ResturantFormProcessController {
+
+	@Autowired
+	CategoryRepository categoryRepository;
+	
+	
+
+	
+	@PostMapping("/createCategory")
+	public String ResturantAdminLogin(Model model,HttpServletRequest request) {
+		String CategoryName=request.getParameter("CategoryName");
+		String CatResult = categoryRepository.findCategoryDescription(CategoryName);
+
+		return "Category :: main-section";
+	}
+}

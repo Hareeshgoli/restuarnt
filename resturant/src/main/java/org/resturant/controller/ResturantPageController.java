@@ -2,8 +2,8 @@ package org.resturant.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.resturant.CustomerDetailsRepository;
 import org.resturant.model.UserTbl;
+import org.resturant.repository.CustomerDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -55,9 +55,19 @@ public class ResturantPageController {
 	}
 	
 	@PostMapping("catagorary")
-	public String ResturantCatagorary(Model model) {
+	public String resturantCatagorary(Model model) {
 
 		return "Category :: main-section";
+	}
+	@PostMapping("SubCatagorary")
+	public String resturantSubCatagorary(Model model) {
+
+		return "SubCategory :: main-section";
+	}
+	@PostMapping("CreateItems")
+	public String resturantCatagoraryItems(Model model) {
+
+		return "Items :: main-section";
 	}
 
 }

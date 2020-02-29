@@ -1,0 +1,48 @@
+package org.resturant.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.resturant.model.CatagoriesTbl;
+import org.resturant.repository.CategoryRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class ResturantFormProcessController {
+
+	@Autowired
+	CategoryRepository categoryRepository;
+	
+	
+
+	
+	@PostMapping("/createCategory")
+	public String ResturantAdminLogin(Model model,HttpServletRequest request) {
+		String CategoryName=request.getParameter("CategoryName").toUpperCase();
+	try{
+		String CatResult = categoryRepository.findCategoryDescription(CategoryName);
+		CatagoriesTbl cat=new CatagoriesTbl();
+		if(CatResult!=null && CatResult.equals(CategoryName))
+		{
+			model.addAttribute("Info", "Entered Category Exists");
+			return "Category :: main-section";
+		}
+		else
+		{
+			cat.setCatagoraryId("ST001");
+			cat.setCatDescription(CategoryName);
+			categoryRepository.save(cat);
+			model.addAttribute("Info", "Saved Successfully");
+			return "Category :: main-section";
+			
+		}
+	}
+	catch(Exception e)
+	{
+		e.printStackTrace();
+	}
+		return "admindashboard";
+	}
+}

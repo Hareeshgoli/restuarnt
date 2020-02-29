@@ -1,0 +1,23 @@
+package org.resturant.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class ResturantFormProcessController {
+
+	
+	
+	
+
+	
+	@PostMapping("/createCategory")
+	public String ResturantAdminLogin(Model model,HttpServletRequest request) {
+		String CategoryName=request.getParameter("CategoryName");
+
+		return "Category :: main-section";
+	}
+}
